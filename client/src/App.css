@@ -1,0 +1,232 @@
+/* Set the margins, the padding and the size (height x width) of the page. */
+body {
+  height: auto;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Set the height, the background colour, the padding and the font size of the application. Also set the application to display as a 
+grid and set the frames. */
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  padding: 15px;
+  background-color: #209cee;
+  font-size: 15px;
+}
+
+/* --- Authentication --- */
+/* Set the border radius and padding to display a round popup. */
+.swal2-popup {
+  border-radius: 50% !important;
+  padding: 100px 20px !important;
+}
+
+/* Set the font size and the bottom margin of the popup's title. */
+.swal2-title {
+  font-size: 25px !important;
+  margin-bottom: 5px !important;
+}
+
+/* Set the padding, margins and the width of the popup's container. */
+.swal2-html-container {
+  padding: 0 !important;
+  margin: 0 auto !important;
+  width: 350px !important;
+}
+
+/* Set the left and right margins, as well as the font size of the popup's close button. */
+.swal2-close {
+  margin-right: 78px !important;
+  margin-top: -20px !important;
+  font-size: 30px !important;
+}
+
+/* Set for the popup's close button to rotate over a 4 second interval, infinitely if hovered over. Set for the icon to be rotated on the 50% 
+axis and to rotate 720 degrees. */
+.swal2-close:hover {
+  animation: closerotate 4s infinite;
+}
+
+@keyframes closerotate {
+  50% {
+    transform: rotate(720deg);
+  }
+}
+
+/* Set the width and the margins of the pop-up's button container. */
+.swal2-actions {
+  width: 200px !important;
+  margin: 20px auto 0px !important;
+}
+
+/* Set the position of the sign in and sign up buttons' container to absolute and aligned it to the top-right corner. Set for it to appear as 
+flex in a row direction and set the width and z-index. */
+#authbuttoncontainer {
+  position: absolute !important;
+  top: 30;
+  right: 30;
+  display: flex;
+  flex-direction: row;
+  width: 400px !important;
+  z-index: 1;
+}
+
+/* Set the padding, the right margin, background and font colors, cursor and added a border (styled, sized, colored and border radius added) of
+the sign in and sign up buttons. */
+.authbutton {
+  padding: 35px 20px;
+  margin-right: 10px !important;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* Set for the sign up and sign in's buttons to change font color and size, as well as background color once hovered over. */
+.authbutton:hover {
+  color: #a861ff;
+  font-size: 16px;
+  background-color: #ffffffa9;
+}
+
+/* Set the size (height x width), the left margin, the padding, the border radius and the background colour of the application's to-do 
+list section. */
+.todo-list {
+  min-height: 580px;
+  height: auto;
+  width: 500px;
+  padding: 5px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+/* Set the text alignment to center, the top and bottom padding and borders. */
+h1 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px dashed #209cee;
+  border-bottom: 2px dashed #209cee;
+}
+
+/* Set the content justification to have a space in between, set the bottom margin, the padding, the background colour, the item alignment, 
+the border radius and the font weight. I also added a box shadow (sizes and colour set). */
+.todo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 3px 10px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px #00000026;
+  font-weight: bold;
+}
+
+/* Set for the table rows' background colours to change once hoeverd over. */
+tr:hover {
+  background-color: #b4def9;
+}
+
+/* Set the padding, background color and text alignment of the table headers. */
+th {
+  padding: 5px;
+  background-color: #a861ff;
+  text-align: left;
+}
+
+/* Set the created and due date's headers' width. */
+.thdate {
+  width: 30%;
+}
+
+/* Set the todo header's width. */
+#thtodo {
+  width: 70%;
+}
+
+/* Set the left padding of the table data cells. */
+td {
+  padding-left: 5px;
+}
+
+/* Set the background color of the action icons' table data cells. */
+.tdactions {
+  background-color: #ffffff;
+}
+
+/* Set the font weight of the todo text to bold. */
+.todotext {
+  font-weight: bold;
+}
+
+/* Set the bottom margin of h5 headers. */
+h5 {
+  margin-bottom: 5px;
+}
+
+/* Set the top margin of the due date's header. */
+#dueheader {
+  margin-top: 10px;
+}
+
+/* Set the size (height x width) and the top margin of the input area. */
+.input {
+  height: 20px;
+  width: 98%;
+}
+
+/* Set for the date picker's "input section" to display as a block and set the width. */
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  display: block;
+  width: 99%;
+}
+
+/* Set the top margin, the padding, the border radius, the background colour and the font weight and size. */
+#submitbutton {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #a861ff;
+}
+
+/* Set the left margin of the "complete" and "remove" buttons/ icons. */
+#completebutton,
+#removebutton {
+  margin-left: 5px;
+}
+
+/* Set for the background colour, the cursor and the font weight and size to change once the "submit" button is hovered over. */
+#submitbutton:hover {
+  background-color: #ffb020;
+  font-weight: bolder;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* Set for the font colour and cursor to change once the "remove" button/ icon is hovered over. */
+.fa-trash-alt:hover {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+/* Set the width and the left-side padding of the logo image's container. */
+#imagecontainer {
+  width: 50%;
+  padding-left: 15px;
+}
+
+/* Set the height of the logo image. */
+img {
+  height: 590px;
+}
