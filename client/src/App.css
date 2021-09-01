@@ -1,3 +1,4 @@
+/* --- General --- */
 /* Set the margins, the padding and the size (height x width) of the page. */
 body {
   height: auto;
@@ -12,86 +13,144 @@ grid and set the frames. */
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: auto;
-  padding: 15px;
+  padding: 13px;
   background-color: #209cee;
   font-size: 15px;
 }
 
+/* --- Home ---*/
+/* Set for the home's container to display as grid and set the columns. */
+#homecontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Set the left margin and padding of the home image container. */
+#homeimagecontainer {
+  margin-left: 20px;
+  padding: 5px;
+}
+
 /* --- Authentication --- */
-/* Set the border radius and padding to display a round popup. */
-.swal2-popup {
-  border-radius: 50% !important;
-  padding: 100px 20px !important;
+/* Set for the auth */
+#authpagecontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-/* Set the font size and the bottom margin of the popup's title. */
-.swal2-title {
-  font-size: 25px !important;
-  margin-bottom: 5px !important;
-}
-
-/* Set the padding, margins and the width of the popup's container. */
-.swal2-html-container {
-  padding: 0 !important;
-  margin: 0 auto !important;
-  width: 350px !important;
-}
-
-/* Set the left and right margins, as well as the font size of the popup's close button. */
-.swal2-close {
-  margin-right: 78px !important;
-  margin-top: -20px !important;
-  font-size: 30px !important;
-}
-
-/* Set for the popup's close button to rotate over a 4 second interval, infinitely if hovered over. Set for the icon to be rotated on the 50% 
-axis and to rotate 720 degrees. */
-.swal2-close:hover {
-  animation: closerotate 4s infinite;
-}
-
-@keyframes closerotate {
-  50% {
-    transform: rotate(720deg);
-  }
-}
-
-/* Set the width and the margins of the pop-up's button container. */
-.swal2-actions {
-  width: 200px !important;
-  margin: 20px auto 0px !important;
-}
-
-/* Set the position of the sign in and sign up buttons' container to absolute and aligned it to the top-right corner. Set for it to appear as 
-flex in a row direction and set the width and z-index. */
-#authbuttoncontainer {
-  position: absolute !important;
-  top: 30;
-  right: 30;
+/* Set the auth form to appear as flex in a column direction and set the content and text alignment, left margin and width. */
+#authcontainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 400px !important;
-  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  text-align: center;
 }
 
-/* Set the padding, the right margin, background and font colors, cursor and added a border (styled, sized, colored and border radius added) of
-the sign in and sign up buttons. */
-.authbutton {
-  padding: 35px 20px;
-  margin-right: 10px !important;
+/* Set the font colour, padding, bottom margin and the border (styled, coloured and sized) of the auth page's header. Also implemented a drop-shadow 
+filter do give the icon a 3D and defined look.*/
+#authheader {
+  padding: 20px;
+  margin-bottom: 30px;
+  color: #943dfd;
+  font-weight: bold;
+  border-top: 3px dashed #ffffff;
+  border-bottom: 3px dashed #ffffff;
+  filter: drop-shadow(1px 2px 2px #000000);
+}
+
+/* Set the top and left margin, as well as the font weight of the auth labels. */
+.authlabels {
+  margin-top: 10px;
+  margin-left: -35px;
+  font-weight: bold;
+}
+
+/* Set the left, top and bottom margins, font size, width, padding, and border (styled, coloured, sized and radius added). */
+.authinput {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -35px;
+  width: 300px;
+  padding: 10px;
   border: 2px solid #ffffff;
-  border-radius: 50%;
-  background-color: transparent;
-  color: #ffffff;
-  font-weight: bolder;
-  cursor: pointer;
+  border-radius: 5px;
+  font-size: "16px";
 }
 
-/* Set for the sign up and sign in's buttons to change font color and size, as well as background color once hovered over. */
+/* Set for the authentication buttons' container to display as grid and set the columns. */
+#authbuttoncontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 45px;
+}
+
+/* Set the top and left padding and font weight and alignment of the auth buttons' header. */
+#authbuttonheader {
+  padding-top: 44px;
+  padding-left: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Set the width, padding, the right margin, background and font colors, font weight and added a border (styled, sized, colored added) of the 
+auth buttons. */
+.authbutton {
+  width: 117px;
+  padding: 10px !important;
+  margin-left: -35px;
+  margin-right: 10px;
+  margin-top: 30px;
+  border: 2px solid #ffffff !important;
+  background-color: transparent !important;
+  color: #ffffff;
+  font-weight: bolder !important;
+}
+
+/* Set for the auth buttons to change font color and background color once hovered over. */
 .authbutton:hover {
-  color: #a861ff;
-  font-size: 16px;
-  background-color: #ffffffa9;
+  color: #a861ff !important;
+  background-color: #ffffffa9 !important;
+}
+
+/* Set the position of the sign-out button to absolute and aligned it to the top-right corner. */
+.signout {
+  position: absolute;
+  top: 0%;
+  left: 90%;
+}
+
+/* Set the border (styled, coloured and sized), the font weight and the background and font colour of the authentication modal's buttons. */
+.authmodalbutton {
+  border: 2px solid #000000 !important;
+  background-color: transparent !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+}
+
+/* Set for the auth buttons to change font and background color once hovered over. */
+.authmodalbutton:hover {
+  background-color: #b4def9 !important;
+  color: #a861ff !important;
+}
+
+/* Set the bottom margin for the modal's password input. */
+.password {
+  margin-bottom: 10px !important;
+}
+
+/* --- CompiledTodo --- */
+/* Set the width and the left-side padding of the logo image's container. */
+#imagecontainer {
+  width: 50%;
+  padding-left: 15px;
+}
+
+/* Set the height of the logo image. */
+img {
+  height: 590px;
 }
 
 /* Set the size (height x width), the left margin, the padding, the border radius and the background colour of the application's to-do 
@@ -176,10 +235,17 @@ h5 {
   margin-top: 10px;
 }
 
+/* Set the top margin of the todo form. */
+#todoform {
+  margin-top: 10px;
+}
+
 /* Set the size (height x width) and the top margin of the input area. */
 .input {
-  height: 20px;
+  height: 35px;
   width: 98%;
+  border-radius: 5px;
+  padding-left: 5px;
 }
 
 /* Set for the date picker's "input section" to display as a block and set the width. */
@@ -220,13 +286,46 @@ h5 {
   cursor: pointer;
 }
 
-/* Set the width and the left-side padding of the logo image's container. */
-#imagecontainer {
-  width: 50%;
-  padding-left: 15px;
+/* Set the border radius and padding to display a round popup. */
+.swal2-popup {
+  border-radius: 50% !important;
+  padding: 100px 20px !important;
 }
 
-/* Set the height of the logo image. */
-img {
-  height: 590px;
+/* Set the font size and the bottom margin of the popup's title. */
+.swal2-title {
+  font-size: 25px !important;
+  margin-bottom: 5px !important;
+}
+
+/* Set the padding, margins and the width of the popup's container. */
+.swal2-html-container {
+  padding: 0 !important;
+  margin: 0 auto !important;
+  width: 350px !important;
+}
+
+/* Set the left and right margins, as well as the font size of the popup's close button. */
+.swal2-close {
+  margin-right: 78px !important;
+  margin-top: -20px !important;
+  font-size: 30px !important;
+}
+
+/* Set for the popup's close button to rotate over a 4 second interval, infinitely if hovered over. Set for the icon to be rotated on the 50% 
+axis and to rotate 720 degrees. */
+.swal2-close:hover {
+  animation: closerotate 4s infinite;
+}
+
+@keyframes closerotate {
+  50% {
+    transform: rotate(720deg) !important;
+  }
+}
+
+/* Set the width and the margins of the pop-up's button container. */
+.swal2-actions {
+  width: 200px !important;
+  margin: 20px auto 0px !important;
 }

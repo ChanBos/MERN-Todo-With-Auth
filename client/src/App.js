@@ -2,13 +2,15 @@
 import React from "react";
 // Imported stylesheet.
 import "./App.css";
-// Imported components.
-import ToDoAuth from "./components/ToDoAuth";
-import ToDoList from "./components/ToDoList";
-import ToDoForm from "./components/ToDoForm";
+// Imported screens.
+import Home from "./screens/Home";
+import CompiledTodo from "./screens/CompiledTodo";
+// Imported router and route matchers from React Router Dom.
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 /**
  * Created the App function and returning components to be exported to Index.js.
+ * Utilized BrowserRouter, Switch and Route from Bootstrap to navigate via links.
  * Added the React Bootstrap link.
  * @returns Application that returns all of the components.
  */
@@ -16,14 +18,18 @@ import ToDoForm from "./components/ToDoForm";
 const App = () => {
   return (
     <div className="app">
-      <div className="todo-list">
-        <ToDoList />
-        <ToDoForm />
-      </div>
-      <div id="imagecontainer">
-        <ToDoAuth />
-        <img src="./images/motivationlogo.png" alt="Motovational Quote Logo" />
-      </div>
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossOrigin="anonymous"
+      ></link>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/users/user" exact component={CompiledTodo} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 };

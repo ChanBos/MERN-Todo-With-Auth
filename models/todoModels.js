@@ -6,17 +6,22 @@ const mongoose = require("mongoose");
  * Set the type of the todos to strings and the date and due to dates.
  */
 
-const todoSchema = mongoose.Schema({
-  Date: {
-    type: Date,
+const todoSchema = mongoose.Schema(
+  {
+    Date: {
+      type: Date,
+    },
+    Todo: {
+      type: String,
+    },
+    Due: {
+      type: Date,
+    },
   },
-  Todo: {
-    type: String,
-  },
-  Due: {
-    type: Date,
-  },
-});
+  {
+    timestamps: true,
+  }
+);
 
-// Exporting TodoShema and userSchema to server.js.
+// Exporting TodoShema to todoController.js.
 module.exports = mongoose.model("Todo", todoSchema);
