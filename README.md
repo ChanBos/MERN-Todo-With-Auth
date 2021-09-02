@@ -10,6 +10,10 @@
 
 > MERN Stack Todo Application with JWT Authentication
 
+![Todo App](https://github.com/ChanBos/MERN-Todo-With-Auth/blob/master/client/public/images/To-Do%20App.png)
+
+### ✨ [Deployed application](https://mern-todo-with-auth.herokuapp.com/)
+
 ## Table of Contents:
 
 - [Prerequisites](#prerequisites)
