@@ -22,10 +22,6 @@ const usersRoutes = require("./routes/usersRoutes.js");
  * Enabling App usages.
  */
 
-// Enabled passport's session and initialize features. The session will be preserved via the session feature and initialization is activated.
-// app.use(passport.initialize());
-// app.use(passport.session());
-
 // Included the body-parser middleware so that the Express server is able to access content that is passed in the body of the HTTP request.
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
